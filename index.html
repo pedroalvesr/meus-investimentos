@@ -35,10 +35,17 @@
     .form-group {
         margin-bottom: 20px;
     }
-     footer {
+    footer {
         margin-top: 50px;
         text-align: center;
         color: #777;
+    }
+    .example-json {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+        overflow-x: auto;
     }
 </style>
 </head>
@@ -76,10 +83,40 @@
     <p>Total de Dividendos: R$ <span id="totalDividends">0,00</span></p>
     <p>Preço de Negociação: R$ <span id="tradingPrice">0,00</span></p>
     <p>Valor de Valorização: R$ <span id="appreciationValue">0,00</span></p>
+
+    <div class="example-json">
+        <h3>Exemplo de JSON Esperado:</h3>
+        <pre>
+{
+    "investmentParameters": {
+        "investmentPrice": 35000.0
+    },
+    "funds": [
+        {
+            "tradingCode": "XPML11",
+            "currentPrice": 117.73,
+            "tradingMaxPrice": 117.0,
+            "quantity": 19,
+            "currentTotalValue": 2236.87,
+            "lastDividend": 0.9,
+            "sumDividend": 17.1,
+            "quotaPercent": 6.66666666666667,
+            "priceLimit": 117.0
+        },
+        // Mais fundos aqui...
+    ],
+    "additionalData": {
+        "totalDividends": 273.153545,
+        "tradingPrice": 34180.490000000005,
+        "appreciationValue": 0.0
+    }
+}
+        </pre>
+    </div>
 </div>
 
 <footer>
-    Este código foi gerado com ChatGPT.
+    Este código foi criado com a ajuda do ChatGPT.
 </footer>
 
 <script>
